@@ -17,9 +17,9 @@ const validarJWT = (req, res = response, next) => {
     req.uid = uid;
     req.name = name;
   } catch (error) {
-    return res.json.status(401).json({
+    return res.status(401).json({
       ok: false,
-      mgs: "Token valido",
+      mgs: "Token invalido",
     });
   }
 
